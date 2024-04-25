@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+  int n;
+  double x;
+
+  // Введення n та x
+  printf("Введіть натуральне число n: ");
+ if (scanf("%d", &n) != 1) {
+ printf("Введено некоректне значення n\n");
+  return 0;
+ }
+  
+  printf("Введіть дійсне число x: ");
+  if (scanf("%lf", &x) != 1) {
+  printf("введено некоректне значення x\n");
+  return 0;
+  }
+  
+  double sum = 0;
+
+  // Розрахунок суми
+  for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= n; j++) {
+      sum += i * x * j;
+    }
+  }
+
+  // Виведення результату
+  printf("Сума: %lf\n", sum);
+
+  return 0;
+}
